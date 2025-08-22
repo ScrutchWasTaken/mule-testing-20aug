@@ -2,12 +2,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.mycompany</groupId>
-	<artifactId>testing-strategy</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
+	<groupId>27791171-198d-4e5d-92f6-4ed573259002</groupId>
+	<artifactId>cicd-app-estelle</artifactId>
+	<version>1.0.0</version>
 	<packaging>mule-application</packaging>
 
-	<name>testing-strategy</name>
+	<name>cicd-app-estelle</name>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
