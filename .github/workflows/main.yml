@@ -220,4 +220,22 @@ jobs:
         if: ${{ false }}
         uses: grafana/k6-action@v0.2.0
         with:
-          filename: ./src/test/resources/performance/test.js  
+          filename: ./src/test/resources/performance/test.js
+
+  anypoint-cli:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+
+      - name: Installing Anypoint CLI
+        run: npm install -g anypoint-cli-v4
+
+      - name: Credentials Configuration
+        run: anypoint-cli-v4 conf username ${{secrets.ANYPOINT_USERNAME}} && anypoint-cli-v4 conf password ${{secrets.ANYPOINT_PASSWORD}} && anypoint-cli-v4 conf organization 27791171-198d-4e5d-92f6-4ed573259002
+
+      - name: Print Account Information
+        run: anypoint-cli-v4 account:user:describe    
